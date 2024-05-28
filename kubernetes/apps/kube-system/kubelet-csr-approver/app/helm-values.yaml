@@ -1,3 +1,3 @@
 ---
-providerRegex: ^(dmf-rpi-001)$
+providerRegex: ^(dmf-rpi-001|dmf-rpi-002|dmf-rpi-003)$
 bypassDnsResolution: true

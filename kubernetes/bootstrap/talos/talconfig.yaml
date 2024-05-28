@@ -38,6 +38,40 @@ nodes:
         mtu: 1500
         vip:
           ip: "192.168.30.50"
+  - hostname: "dmf-rpi-002"
+    ipAddress: "192.168.30.52"
+    installDisk: "/dev/mmcblk0"
+    talosImageURL: factory.talos.dev/installer/ee21ef4a5ef808a9b7484cc0dda0f25075021691c8c09a276591eedb638ea1f9
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "d8:3a:dd:4c:b9:25"
+        dhcp: false
+        addresses:
+          - "192.168.30.52/24"
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.30.1"
+        mtu: 1500
+        vip:
+          ip: "192.168.30.50"
+  - hostname: "dmf-rpi-003"
+    ipAddress: "192.168.30.53"
+    installDisk: "/dev/mmcblk0"
+    talosImageURL: factory.talos.dev/installer/ee21ef4a5ef808a9b7484cc0dda0f25075021691c8c09a276591eedb638ea1f9
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "dc:a6:32:a5:fa:0f"
+        dhcp: false
+        addresses:
+          - "192.168.30.53/24"
+        routes:
+          - network: 0.0.0.0/0
+            gateway: "192.168.30.1"
+        mtu: 1500
+        vip:
+          ip: "192.168.30.50"
 
 patches:
   # Configure containerd
